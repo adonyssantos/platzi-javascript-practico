@@ -64,3 +64,33 @@ document
       })}`
     )
   );
+
+// Calculate circle diameter
+document
+  .getElementById("circle-calculate-diameter")
+  .addEventListener("click", () =>
+    print(
+      "circle-result",
+      `The perimeter is: ${circleDiameter(valueOf("circle-radius"))}`
+    )
+  );
+
+// Calculate circle perimeter
+document
+  .getElementById("circle-calculate-perimeter")
+  .addEventListener("click", () =>
+    print(
+      "circle-result",
+      `The perimeter is: ${circlePerimeter(valueOf("circle-radius"))}`
+    )
+  );
+
+// Calculate circle area
+document
+  .getElementById("circle-calculate-area")
+  .addEventListener("click", () =>
+    print(
+      "circle-result",
+      `The area is: ${circleArea(valueOf("circle-radius"))}`
+    )
+  );
