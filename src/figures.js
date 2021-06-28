@@ -23,7 +23,7 @@ const valueOf = (id) => {
 
 // Calculate perimeter
 document
-  .getElementById("calculate-perimeter")
+  .getElementById("square-calculate-perimeter")
   .addEventListener("click", () =>
     print(
       "square-result",
@@ -33,7 +33,7 @@ document
 
 // Calculate area
 document
-  .getElementById("calculate-area")
+  .getElementById("square-calculate-area")
   .addEventListener("click", () =>
     print("square-result", `The area is: ${areaSquare(valueOf("square-side"))}`)
   );

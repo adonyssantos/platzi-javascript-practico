@@ -16,12 +16,12 @@
     <header class="container text-center">
       <h1 class="display-1">Geometric figures</h1>
     </header>
-    <main class="container">
-      <section class="card span-1 small-span-3">
+    <main class="container grid col-3 med-col-1">
+      <section class="card span-1 small-span-3 margin-bottom">
         <h2>Calculate the area and perimeter of a square</h2>
         <form>
           <label for="square-side">
-            <span class="bold">Square Side:</span>
+            <span class="bold">Square side:</span>
             <input
               type="number"
               name="square-side"
@@ -29,14 +29,86 @@
               class="input"
             />
           </label>
-          <button type="button" id="calculate-perimeter" class="btn">
+          <button type="button" id="square-calculate-perimeter" class="btn">
             Calculate perimeter
           </button>
-          <button type="button" id="calculate-area" class="btn">
+          <button type="button" id="square-calculate-area" class="btn">
             Calculate area
           </button>
         </form>
         <output id="square-result"></output>
+      </section>
+      <section class="card span-1 small-span-3 margin-bottom">
+        <h2>Calculate the area and perimeter of a triangle</h2>
+        <form>
+          <label for="triangle-side1">
+            <span class="bold">Triangle side 1:</span>
+            <input
+              type="number"
+              name="triangle-side1"
+              id="triangle-side1"
+              class="input"
+            />
+          </label>
+          <label for="triangle-side2">
+            <span class="bold">Triangle side 2:</span>
+            <input
+              type="number"
+              name="triangle-side2"
+              id="triangle-side2"
+              class="input"
+            />
+          </label>
+          <label for="triangle-side3">
+            <span class="bold">Triangle side 3 (base):</span>
+            <input
+              type="number"
+              name="triangle-side3"
+              id="triangle-side3"
+              class="input"
+            />
+            <label for="triangle-height">
+              <span class="bold">Triangle height</span>
+              <input
+                type="number"
+                name="triangle-height"
+                id="triangle-height"
+                class="input"
+              />
+            </label>
+          </label>
+          <button type="button" id="triangle-calculate-perimeter" class="btn">
+            Calculate perimeter
+          </button>
+          <button type="button" id="triangle-calculate-area" class="btn">
+            Calculate area
+          </button>
+        </form>
+        <output id="triangle-result"></output>
+      </section>
+      <section class="card span-1 small-span-3 margin-bottom">
+        <h2>Calculate the diameter, perimeter and area of a circle</h2>
+        <form>
+          <label for="circle-side1">
+            <span class="bold">Circle radius:</span>
+            <input
+              type="number"
+              name="circle-radius"
+              id="circle-radius"
+              class="input"
+            />
+          </label>
+          <button type="button" id="circle-calculate-diameter" class="btn">
+            Calculate diameter
+          </button>
+          <button type="button" id="circle-calculate-perimeter" class="btn">
+            Calculate perimeter
+          </button>
+          <button type="button" id="circle-calculate-area" class="btn">
+            Calculate area
+          </button>
+        </form>
+        <output id="circle-result"></output>
       </section>
     </main>
 
