@@ -20,3 +20,20 @@ const valueOf = (id) => {
   const value = input.value;
   return value;
 };
+
+// Calculate perimeter
+document
+  .getElementById("calculate-perimeter")
+  .addEventListener("click", () =>
+    print(
+      "square-result",
+      `The perimeter is: ${perimeterSquare(valueOf("square-side"))}`
+    )
+  );
+
+// Calculate area
+document
+  .getElementById("calculate-area")
+  .addEventListener("click", () =>
+    print("square-result", `The area is: ${areaSquare(valueOf("square-side"))}`)
+  );
