@@ -7,8 +7,24 @@
     <title>Geometric figures</title>
   </head>
   <body>
-    <main>
+    <header>
       <h1>Geometric figures</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Calculate the area and perimeter of a square</h2>
+        <form>
+          <label for="square-side">
+            <span>Square Side</span>
+            <input type="number" name="square-side" id="square-side" />
+          </label>
+          <button type="button" id="calculate-perimeter">
+            Calculate perimeter
+          </button>
+          <button type="button" id="calculate-area">Calculate area</button>
+        </form>
+        <output id="square-result"></output>
+      </section>
     </main>
 
     <script src="../src/figures.js"></script>

@@ -10,3 +10,13 @@ const triangleArea = ({ base, height }) => (base * height) / 2;
 const circleDiameter = (radius) => radius + radius;
 const circlePerimeter = (radius) => circleDiameter(radius) * Math.PI;
 const circleArea = (radius) => radius * radius * Math.PI;
+
+// DOM Printer
+const print = (id, data) => (document.getElementById(id).innerHTML = data);
+
+// Get input value
+const valueOf = (id) => {
+  const input = document.getElementById(id);
+  const value = input.value;
+  return value;
+};
