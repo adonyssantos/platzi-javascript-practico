@@ -5,23 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometric figures</title>
+    <!-- Palm Tree CSS -->
+    <link
+      rel="stylesheet"
+      href="https://adonyssantos.me/palm-tree-css/dist/css/style.min.css"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <header>
-      <h1>Geometric figures</h1>
+    <header class="container text-center">
+      <h1 class="display-1">Geometric figures</h1>
     </header>
-    <main>
-      <section>
+    <main class="container">
+      <section class="card span-1 small-span-3">
         <h2>Calculate the area and perimeter of a square</h2>
         <form>
           <label for="square-side">
-            <span>Square Side</span>
-            <input type="number" name="square-side" id="square-side" />
+            <span class="bold">Square Side:</span>
+            <input
+              type="number"
+              name="square-side"
+              id="square-side"
+              class="input"
+            />
           </label>
-          <button type="button" id="calculate-perimeter">
+          <button type="button" id="calculate-perimeter" class="btn">
             Calculate perimeter
           </button>
-          <button type="button" id="calculate-area">Calculate area</button>
+          <button type="button" id="calculate-area" class="btn">
+            Calculate area
+          </button>
         </form>
         <output id="square-result"></output>
       </section>
