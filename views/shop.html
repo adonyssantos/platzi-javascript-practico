@@ -16,7 +16,24 @@
     <header class="container text-center">
       <h1 class="display-1">Percentages and discounts</h1>
     </header>
-    <main class="container"></main>
+    <main class="container">
+      <section class="card">
+        <form>
+          <label for="price">
+            <span class="bold">Price:</span>
+            <input type="number" name="price" id="price" class="input" />
+          </label>
+          <label for="discount">
+            <span class="bold">Discount:</span>
+            <input type="number" name="discount" id="discount" class="input" />
+          </label>
+          <button type="button" id="calculate-discount" class="btn">
+            Calculate discount
+          </button>
+        </form>
+        <output id="result"></output>
+      </section>
+    </main>
 
     <script src="../src/shop.js"></script>
   </body>
