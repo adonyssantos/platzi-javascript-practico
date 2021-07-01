@@ -39,10 +39,47 @@ const mode = (arr) =>
     )
     .pop();
 
-const list = [100, 200, 300, 500];
-const list2 = [200, 100, 40000000, 500];
-const list3 = [1, 2, 3, 1, 2, 3, 4, 2, 2, 2, 1];
+// DOM Printer
+const print = (id, data) => (document.getElementById(id).innerHTML = data());
 
-console.log(average(list));
-console.log(median(list2));
-console.log(mode(list3));
+// Get input value
+const valueOf = (id) => {
+  const input = document.getElementById(id);
+  const value = input.value;
+  return value;
+};
+
+// Convert number string to array
+const stringToArray = (string) => {
+  const array = string.trim().split(/ +/g);
+  const newArray = [];
+
+  array.map((element) => {
+    const elementWithoutComa = element.replace(",", "");
+    const elementInNumber = parseInt(elementWithoutComa);
+    newArray.push(elementInNumber);
+  });
+
+  return newArray;
+};
+
+document.getElementById("calculate-average").addEventListener("click", () => {
+  print("result", () => {
+    const result = average(stringToArray(valueOf("numbers")));
+    return `The avg is: ${result}`;
+  });
+});
+
+document.getElementById("calculate-median").addEventListener("click", () => {
+  print("result", () => {
+    const result = median(stringToArray(valueOf("numbers")));
+    return `The median is: ${result}`;
+  });
+});
+
+document.getElementById("calculate-mode").addEventListener("click", () => {
+  print("result", () => {
+    const result = mode(stringToArray(valueOf("numbers")));
+    return `The mode is: ${result}`;
+  });
+});

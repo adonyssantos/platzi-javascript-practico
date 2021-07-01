@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stats</title>
+    <!-- Palm Tree CSS -->
+    <link
+      rel="stylesheet"
+      href="https://adonyssantos.me/palm-tree-css/dist/css/style.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="container text-center">
+      <h1 class="display-1">Stats</h1>
+    </header>
+    <main class="container">
+      <section class="card">
+        <form>
+          <label for="price">
+            <span class="bold">Numbers:</span>
+            <input
+              type="input"
+              name="numbers"
+              id="numbers"
+              class="input"
+              placeholder="100, 50, 90, 10000"
+            />
+          </label>
+          <button type="button" id="calculate-average" class="btn">
+            Calculate average
+          </button>
+          <button type="button" id="calculate-median" class="btn">
+            Calculate median
+          </button>
+          <button type="button" id="calculate-mode" class="btn">
+            Calculate mode
+          </button>
+        </form>
+        <output id="result"></output>
+      </section>
+    </main>
+
+    <script src="../src/stats.js"></script>
+  </body>
+</html>
