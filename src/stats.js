@@ -17,19 +17,32 @@ const isEven = (number) => {
 
 // Mediana
 const median = (arr) => {
-  const half = parseInt(arr.length / 2);
+  const sortedArr = arr.sort((a, b) => a - b);
+  const half = parseInt(sortedArr.length / 2);
 
-  if (isEven(arr.length)) {
-    const firstElement = arr[half];
-    const secondElement = arr[half - 1];
+  if (isEven(sortedArr.length)) {
+    const firstElement = sortedArr[half];
+    const secondElement = sortedArr[half - 1];
     return average([firstElement, secondElement]);
   } else {
-    return arr[half];
+    return sortedArr[half];
   }
 };
 
+// Moda
+const mode = (arr) =>
+  arr
+    .sort(
+      (a, b) =>
+        arr.filter((valor) => valor === a).length -
+        arr.filter((valor) => valor === b).length
+    )
+    .pop();
+
 const list = [100, 200, 300, 500];
-const list2 = [100, 200, 500, 40000000];
+const list2 = [200, 100, 40000000, 500];
+const list3 = [1, 2, 3, 1, 2, 3, 4, 2, 2, 2, 1];
 
 console.log(average(list));
 console.log(median(list2));
+console.log(mode(list3));
